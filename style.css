@@ -1,0 +1,178 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+@font-face {
+  font-family: myFirstFont;
+  src: url(SCHABO-Condensed.woff2);
+}
+@font-face {
+  font-family: mysecondFont;
+  src: url(Luthon\ Southard\ Script.ttf);
+}
+@font-face {
+  font-family: mythirdFont;
+  src: url(Gilroy-SemiBold\ -\ Copy.ttf);
+}
+@font-face {
+  font-family: myfourthFont;
+  src: url(Gilroy-MediumItalic\ -\ Copy.ttf);
+}
+html,
+body {
+  font-size: 62.5%;
+  height: 100%;
+  overflow: hidden;
+}
+.scene {
+  position: relative;
+  height: 100%;
+  /* background: black; */
+  background-size: cover;
+
+  /* padding: 20rem; */
+  text-align: center;
+  cursor: none;
+}
+.text-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  z-index: 10;
+  font-family: "myFirstFont";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 100px;
+  gap: 17px;
+
+  line-height: 120px;
+}
+.text-wrapper:last-child {
+  gap: 0px;
+  margin-left: -20px;
+}
+.text-wrapper P {
+  grid-column: 1/-1;
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  color: #9b9b9b;
+  transform: translate(-50%, -50%);
+  font-family: "mythirdFont";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.585em;
+}
+.bgimg {
+  width: 100%;
+  height: 100%;
+}
+span {
+  font-family: "mysecondFont";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 200px;
+  line-height: 300px;
+  transform: translateY(-20px);
+  margin-right: -25px;
+  /* identical to box height */
+
+  color: #ff8100;
+}
+.hovertext {
+  position: absolute;
+  font-family: "myfourthFont";
+  font-style: italic;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+  z-index: 10;
+  top: 94%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+
+  color: #616161;
+}
+.comfort {
+  z-index: -1;
+}
+.magic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: block;
+  background: black;
+}
+.analog {
+  width: 47.05px;
+  height: 47.05px;
+  background: #1d1d1d;
+  position: absolute;
+  z-index: 999;
+  top: 85%;
+  margin: 1px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  /* SOLIDS/DARK GREY */
+
+  border: 0.5px solid #333333;
+  /* display: none; */
+}
+/* .magic {
+  z-index: 5;
+  position: absolute;
+
+  width: 35rem;
+  height: 35rem;
+  box-shadow: 0 0 30px 40px black inset;
+
+  outline-style: inset;
+  background: url("Artboard\ 9.png") no-repeat fixed;
+  background-size: cover;
+  border-radius: 50%;
+
+
+} */
+/* 50% 50% */
+/* .check-out {
+  z-index: 100;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: #fff;
+  font-family: test;
+
+} */
+
+.mobiletext {
+  display: none;
+  position: absolute;
+  font-family: "myfourthFont";
+  font-style: italic;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  z-index: 10;
+  top: 94%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+
+  color: #616161;
+}

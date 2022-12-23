@@ -1,0 +1,30 @@
+@media (max-width: 46em) {
+  .text-wrapper {
+    font-size: 70px;
+  }
+  span {
+    font-size: 150px;
+  }
+}
+@media (max-width: 34em) {
+  .text-wrapper {
+    font-size: 36px;
+    gap: 5px;
+  }
+  span {
+    font-size: 64px;
+    margin-right: -10px;
+    transform: translateY(-10px);
+  }
+  .text-wrapper p {
+    font-size: 12px;
+    width: 100%;
+    top: 60%;
+  }
+  .hovertext {
+    display: none;
+  }
+  .mobiletext {
+    display: block;
+  }
+}
