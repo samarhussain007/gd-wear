@@ -8,6 +8,25 @@
     <link href="queries.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script>
+      function absorbEvent_(event) {
+        var e = event || window.event;
+        e.preventDefault && e.preventDefault();
+        e.stopPropagation && e.stopPropagation();
+        e.cancelBubble = true;
+        e.returnValue = false;
+        return false;
+      }
+
+      function preventLongPressMenu(node) {
+        node.ontouchstart = absorbEvent_;
+        node.ontouchmove = absorbEvent_;
+        node.ontouchend = absorbEvent_;
+        node.ontouchcancel = absorbEvent_;
+      }
+
+      function init() {
+        preventLongPressMenu(document.querySelector("body"));
+      }
       // $(document).ready(function () {
       //   var $magic = $(".magic"),
       //     magicWHalf = $magic.width() / 2;
@@ -65,7 +84,7 @@
 
     <title>Document</title>
   </head>
-  <body>
+  <body onload="init()">
     <div class="scene">
       <div class="text-wrapper">
         FASHION<span>art</span>
@@ -100,17 +119,6 @@
                 "px, transparent, #000 10% )"
             );
           });
-
-        preventLongPressMenu(document.querySelectorAll("body img"));
-
-        function preventLongPressMenu(nodes) {
-          for (var i = 0; i < nodes.length; i++) {
-            nodes[i].ontouchstart = absorbEvent_;
-            nodes[i].ontouchmove = absorbEvent_;
-            nodes[i].ontouchend = absorbEvent_;
-            nodes[i].ontouchcancel = absorbEvent_;
-          }
-        }
       }
     </script>
   </body>
