@@ -78,5 +78,12 @@
       <div class="magic"></div>
       <div class="analog"></div>
     </div>
+    <script>
+      const x = window.matchMedia("(max-width:34em)");
+
+      if (x.matches) {
+        $("body").on("touchstart", function () {});
+      }
+    </script>
   </body>
 </html>

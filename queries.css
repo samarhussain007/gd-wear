@@ -1,9 +1,18 @@
-@media (max-width: 46em) {
+@media (max-width: 48em) {
   .text-wrapper {
     font-size: 70px;
   }
   span {
     font-size: 150px;
+  }
+  .hovertext {
+    display: none;
+  }
+  .mobiletext {
+    display: block;
+  }
+  .analog {
+    display: block;
   }
 }
 @media (max-width: 34em) {
@@ -20,11 +29,5 @@
     font-size: 12px;
     width: 100%;
     top: 60%;
-  }
-  .hovertext {
-    display: none;
-  }
-  .mobiletext {
-    display: block;
   }
 }

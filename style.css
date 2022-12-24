@@ -117,6 +117,7 @@ span {
   background: black;
 }
 .analog {
+  display: none;
   width: 47.05px;
   height: 47.05px;
   background: #1d1d1d;
