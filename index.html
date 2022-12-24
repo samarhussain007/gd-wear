@@ -82,6 +82,21 @@
           });
       } else if (y.matches) {
         document.querySelector(".bgimg").src = "1024.png";
+        document
+          .querySelector("body")
+          .addEventListener("touchmove", function (e) {
+            let X = e.touches[0].clientX;
+            let Y = e.touches[0].clientY - 80;
+            $(".analog").css({ left: X, top: Y + 80 });
+            $(".magic").css(
+              "background",
+              "radial-gradient(circle at " +
+                X +
+                "px " +
+                Y +
+                "px, transparent, #000 17% )"
+            );
+          });
       }
     </script>
   </body>
