@@ -80,13 +80,15 @@
     </div>
     <script>
       const x = window.matchMedia("(max-width:34em)");
-
+      var $magic = $(".magic"),
+        magicWHalf = $magic.width();
+      console.log(magicWHalf);
       if (x.matches) {
         document
           .querySelector(".magic")
           .addEventListener("touchmove", function (e) {
-            let X = e.touches[0].screenX;
-            let Y = e.touches[0].screenY;
+            let X = e.touches[0].clientX;
+            let Y = e.touches[0].clientY - 200;
 
             $(".magic").css(
               "background",
