@@ -82,7 +82,21 @@
       const x = window.matchMedia("(max-width:34em)");
 
       if (x.matches) {
-        $("body").on("touchstart", function () {});
+        document
+          .querySelector(".magic")
+          .addEventListener("touchmove", function (e) {
+            let X = e.touches[0].screenX;
+            let Y = e.touches[0].screenY;
+
+            $(".magic").css(
+              "background",
+              "radial-gradient(circle at " +
+                X +
+                "px " +
+                Y +
+                "px, transparent, #000 10% )"
+            );
+          });
       }
     </script>
   </body>
