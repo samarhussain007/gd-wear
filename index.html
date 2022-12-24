@@ -83,6 +83,7 @@
     </div>
     <script>
       const x = window.matchMedia("(max-width:34em)");
+      const y = window.matchMedia("(max-width:68em)");
       var $magic = $(".magic"),
         magicWHalf = $magic.width();
       console.log(magicWHalf);
@@ -103,7 +104,13 @@
                 "px, transparent, #000 15% )"
             );
           });
+      } else if (y.matches) {
+        document.querySelector(".bgimg").src = "1024.png";
       }
+
+      // if (!x.matches && y.matches) {
+      //   document.querySelector(".bgimg").src = "1024.png";
+      // }
     </script>
   </body>
 </html>
