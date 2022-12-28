@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="icon" href="./FAVICON.png" />
-    <link rel="apple-touch-icon" href="/FAVICON.png" />
+    <link rel="icon" href="./pngs/FAVICON.png" />
+    <link rel="apple-touch-icon" href="/pngs/FAVICON.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet" />
     <link href="queries.css" rel="stylesheet" />
@@ -15,7 +15,7 @@
     <meta property="og:title" content="GD Wear" />
     <meta
       property="og:image"
-      content="https://i.ibb.co/6YZN86w/gd-wear-thumbnail.png"
+      content="https://i.ibb.co/Y21G2PF/Microsoft-Teams-image-15.png"
     />
     <meta
       property="og:description"
@@ -32,7 +32,11 @@
   <body>
     <div class="scene">
       <div class="logo-container">
-        <img src="./GD Wear logo 1 (1).svg" class="logo" alt="gd wear logo" />
+        <img
+          src="./svgs/GD Wear logo 1 (1).svg"
+          class="logo"
+          alt="gd wear logo"
+        />
       </div>
       <div class="text-wrapper">
         FASHION<span>art</span>
@@ -41,7 +45,7 @@
       </div>
       <div class="hovertext">Hover over to see the magic</div>
       <div class="mobiletext">Move the circle around to see the magic</div>
-      <img src="./main.png" class="bgimg" alt="background-main-img" />
+      <img src="./pngs/main.png" class="bgimg" alt="background-main-img" />
       <div class="magic"></div>
       <div class="analog"></div>
     </div>
@@ -81,7 +85,7 @@
       const y = window.matchMedia("(max-width:68em)");
       console.log();
       if (x.matches) {
-        document.querySelector(".bgimg").src = "mobilepic.png";
+        document.querySelector(".bgimg").src = "./pngs/mobilepic.png";
         document
           .querySelector("body")
           .addEventListener("touchmove", function (e) {
@@ -104,7 +108,7 @@
             $(".analog").css({ top: intialY + 20, left: intialX + 20 });
           });
       } else if (y.matches) {
-        document.querySelector(".bgimg").src = "1024.png";
+        document.querySelector(".bgimg").src = "./pngs/1024.png";
         document
           .querySelector("body")
           .addEventListener("touchmove", function (e) {

@@ -10,19 +10,19 @@
 }
 @font-face {
   font-family: myFirstFont;
-  src: url(SCHABO-Condensed.woff2);
+  src: url(./fonts/SCHABO-Condensed.woff2);
 }
 @font-face {
   font-family: mysecondFont;
-  src: url(Luthon\ Southard\ Script.ttf);
+  src: url(./fonts/Luthon\ Southard\ Script.ttf);
 }
 @font-face {
   font-family: mythirdFont;
-  src: url(Gilroy-SemiBold\ -\ Copy.ttf);
+  src: url(./fonts/Gilroy-SemiBold\ -\ Copy.ttf);
 }
 @font-face {
   font-family: myfourthFont;
-  src: url(Gilroy-MediumItalic\ -\ Copy.ttf);
+  src: url(./fonts/Gilroy-MediumItalic\ -\ Copy.ttf);
 }
 html,
 body {
