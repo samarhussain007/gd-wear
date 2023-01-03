@@ -83,9 +83,33 @@
       console.log(intialX, intialY);
       const x = window.matchMedia("(max-width:34em)");
       const y = window.matchMedia("(max-width:68em)");
+      const z = window.matchMedia("(max-width:48em)");
       console.log();
       if (x.matches) {
         document.querySelector(".bgimg").src = "./pngs/mobilepic.png";
+        document
+          .querySelector("body")
+          .addEventListener("touchmove", function (e) {
+            let X = e.touches[0].clientX;
+            let Y = e.touches[0].clientY - 80;
+            $(".analog").css({ left: X, top: Y + 80 });
+            $(".magic").css(
+              "background",
+              "radial-gradient(circle at " +
+                X +
+                "px " +
+                Y +
+                "px, transparent, #000 17% )"
+            );
+          });
+        document
+          .querySelector("body")
+          .addEventListener("touchend", function (e) {
+            $(".magic").css("background", "black");
+            $(".analog").css({ top: intialY + 20, left: intialX + 20 });
+          });
+      } else if (z.matches) {
+        document.querySelector(".bgimg").src = "./pngs/tablet.png";
         document
           .querySelector("body")
           .addEventListener("touchmove", function (e) {
